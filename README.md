@@ -1,0 +1,2 @@
+Sparks is a small hack day project created to learn a micro framework in this case Spark Java (http://sparkjava.com) and Angular.
+The purpose was to learn how to create a single page application using a Java backend.
