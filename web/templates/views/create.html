@@ -1,0 +1,34 @@
+<div class="page-header">
+    Create appointment
+</div>
+<div class="alert alert-success" ng-show="added">
+    The appointment was added successfully.
+</div>
+<div class="block">
+    <form role="form" ng-submit="create()">
+        <div class="form-horizontal">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control" ng-model="appointment.title" ng-required="true" required />
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" class="form-control" ng-model="appointment.description" ng-required="true" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <div class="input-group">
+                        <input type="text" id="date" class="form-control" datepicker-popup="{{format}}" ng-model="appointment.date" is-open="dateControl.visible" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group well">
+                    <input type="submit" class="btn btn-primary" value="Add Appointment">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

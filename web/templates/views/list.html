@@ -1,0 +1,23 @@
+<div class="page-header">
+    All appointments
+</div>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="appointment in appointments">
+                <td>{{appointment.title}}</td>
+                <td>{{appointment.description}}</td>
+                <td>{{appointment.date | date: format}}</td>
+                <td><a href="#/edit/{{appointment.id}}" class="btn btn-default btn-xs">Edit</a>&nbsp;<a ng-click="delete(appointment.id)" class="btn btn-danger btn-xs">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,21 @@
+apply plugin: 'idea'
+
+idea {
+    module {
+        name = 'sparks'
+
+        excludeDirs += file('.gradle')
+        excludeDirs += file('.idea')
+        excludeDirs += file('build')
+        excludeDirs += file('logs')
+        excludeDirs += file('out')
+
+        downloadSources = true
+    }
+
+    project {
+        languageLevel = '1.8'
+    }
+}
+
+tasks.idea.dependsOn(cleanIdea, cleanIdeaWorkspace)
